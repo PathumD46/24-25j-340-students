@@ -36,27 +36,42 @@ The system's architecture includes three core components:
 - **IoT Devices**: Sensors and actuators connected to an ESP32 microcontroller for real-time data collection and control.
 - **AI Models**: Machine learning models for disease detection, maturity analysis, and predictive environmental insights.
 - **Mobile Application**: A Flutter-based app for monitoring, notifications, and remote control.
+
+# Project Dependencies
+
+## IoT Components
+
+- **Microcontroller**: ESP32
+
+- **Sensors**:
+  - **DHT22**: Temperature and humidity
+  - **MQ135**: Air quality
+  - **pH sensor**: pH levels
+
+- **Actuators**:
+  - Fans
+  - Humidifiers
+  - Lights
+
+---
+
+## AI Frameworks
+
+- **Python Libraries**:
+  - **TensorFlow/Keras**: Image classification
+  - **Scikit-learn**: SVR model
+  - **OpenCV**: Image preprocessing
+
+---
+
+## Mobile Development
+
+- **Framework**: Flutter
+
+- **Plugins**:
+  - **http**: API integration
+  - **firebase**: Cloud database
+  - **provider**: State management
+
   
-                     +-------------------------+
-                     |       Cloud Storage     |
-                     +----------+--------------+
-                                |
-              +-----------------+------------------+
-              |                                    |
-+-------------v-----------+            +----------v-----------+
-|       IoT Devices       |            |       Mobile App      |
-| - Sensors               |            | - Real-time Monitoring|
-| - Actuators             |            | - Alerts & Control    |
-| - ESP32 Microcontroller |            | - Predictive Insights |
-+-------------+-----------+            +----------+------------+
-              |                                    |
-              +----------------+    +-------------+
-                               |    |
-                               v    v
-                          +----+----+----+
-                          |   AI Models   |
-                          | - Disease     |
-                          | - Maturity    |
-                          | - SVR Forecast|
-                          +---------------+
 
