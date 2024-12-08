@@ -36,10 +36,27 @@ The system's architecture includes three core components:
 - **IoT Devices**: Sensors and actuators connected to an ESP32 microcontroller for real-time data collection and control.
 - **AI Models**: Machine learning models for disease detection, maturity analysis, and predictive environmental insights.
 - **Mobile Application**: A Flutter-based app for monitoring, notifications, and remote control.
+  
+                     +-------------------------+
+                     |       Cloud Storage     |
+                     +----------+--------------+
+                                |
+              +-----------------+------------------+
+              |                                    |
++-------------v-----------+            +----------v-----------+
+|       IoT Devices       |            |       Mobile App      |
+| - Sensors               |            | - Real-time Monitoring|
+| - Actuators             |            | - Alerts & Control    |
+| - ESP32 Microcontroller |            | - Predictive Insights |
++-------------+-----------+            +----------+------------+
+              |                                    |
+              +----------------+    +-------------+
+                               |    |
+                               v    v
+                          +----+----+----+
+                          |   AI Models   |
+                          | - Disease     |
+                          | - Maturity    |
+                          | - SVR Forecast|
+                          +---------------+
 
-Mobile Development Framework:
-Flutter
-Plugins:
-http (for API integration)
-firebase (for cloud database)
-provider (for state management)
